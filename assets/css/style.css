@@ -2246,8 +2246,16 @@ a.team-group-tag:hover {
 }
 
 .teaching-item {
+  position: relative;
   display: grid;
   gap: var(--card-gap-tight);
+  cursor: pointer;
+}
+
+.teaching-item h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .teaching-item h3 {
