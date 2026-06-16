@@ -988,8 +988,7 @@ body:has(#theme-mode-toggle:checked) .theme-toggle {
 .callout-card,
 .contact-card,
 .publication-card,
-.team-card,
-.embed-block {
+.team-card {
   background: var(--surface-0);
   border: 1px solid var(--line-300);
   border-radius: var(--radius-card);
@@ -1001,6 +1000,13 @@ body:has(#theme-mode-toggle:checked) .theme-toggle {
     border-color var(--motion-fast) var(--ease-standard);
 }
 
+.embed-block {
+  background: var(--surface-0);
+  border: 1px solid var(--line-300);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
 .feature-card:hover,
 .feature-card:focus-within,
 .callout-card:hover,
@@ -1008,9 +1014,7 @@ body:has(#theme-mode-toggle:checked) .theme-toggle {
 .publication-card:hover,
 .publication-card:focus-within,
 .team-card:hover,
-.team-card:focus-within,
-.embed-block:hover,
-.embed-block:focus-within {
+.team-card:focus-within {
   transform: scale(var(--interactive-scale));
   box-shadow: var(--shadow-card-hover);
   border-color: rgba(253, 181, 21, 0.34);
@@ -1577,6 +1581,15 @@ a.team-group-tag:hover {
   position: relative;
   max-width: 40rem;
   margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+.home-showcase-slide .pub-carousel-prev {
+  left: -1.5rem;
+}
+
+.home-showcase-slide .pub-carousel-next {
+  right: -1.5rem;
 }
 
 .home-showcase-track {
@@ -1697,10 +1710,18 @@ a.team-group-tag:hover {
 }
 
 .publication-card {
+  position: relative;
   display: grid;
   grid-template-columns: 10.5rem minmax(0, 1fr);
   gap: var(--card-gap);
   overflow: hidden;
+  cursor: pointer;
+}
+
+.publication-card .publication-title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .publication-card-compact {
@@ -1886,7 +1907,7 @@ a.team-group-tag:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
   gap: var(--card-cluster-gap);
-  align-items: start;
+  align-items: stretch;
 }
 
 .publication-card-book {
@@ -2091,6 +2112,10 @@ a.team-group-tag:hover {
   gap: var(--card-gap);
   align-items: stretch;
   padding: var(--card-pad);
+}
+
+.news-card-no-image {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .news-image {
