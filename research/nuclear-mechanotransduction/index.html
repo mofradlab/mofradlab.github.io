@@ -91,7 +91,7 @@
       rel="stylesheet"
       href="/assets/vendor/molstar/molstar.css" />
   
-  <link rel="stylesheet" href="/assets/css/style.css?v=1782604800" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=1798243200" />
   
     <script src="/assets/vendor/molstar/molstar.js" defer></script>
     <script src="/assets/js/molstar-viewer.js" defer></script>
@@ -147,13 +147,25 @@
     
       
       
-      <li class="nav-item">
+      <li class="nav-item nav-item-has-children">
         <div class="nav-item-heading">
           <a class="nav-item-link" href="/">
             <span class="nav-link-label">Home</span>
           </a>
           
+            <span class="nav-link-caret nav-link-caret-static" aria-hidden="true"></span>
+          
         </div>
+        
+          <ul class="nav-submenu" aria-label="Home submenu">
+            
+              <li><a href="/preview/home-a/">Preview A — Split hero</a></li>
+            
+              <li><a href="/preview/home-c/">Preview C — Editorial</a></li>
+            
+              <li><a href="/preview/home-d/">Preview D — Improved current</a></li>
+            
+          </ul>
         
       </li>
     
@@ -272,11 +284,28 @@
     
       
       
-      <li class="nav-item">
+      <li class="nav-item nav-item-has-children">
         
-          <a class="nav-item-link" href="/">
-            <span class="nav-link-label">Home</span>
-          </a>
+          <div class="nav-item-heading">
+            <a class="nav-item-link" href="/">
+              <span class="nav-link-label">Home</span>
+            </a>
+            <details class="nav-mobile-submenu-shell">
+              <summary class="nav-mobile-submenu-toggle" aria-controls="site-navigation-mobile-1">
+                <span class="nav-link-caret" aria-hidden="true"></span>
+                <span class="visually-hidden">Toggle Home submenu</span>
+              </summary>
+            </details>
+          </div>
+          <ul id="site-navigation-mobile-1" class="nav-submenu" aria-label="Home submenu">
+            
+              <li><a href="/preview/home-a/">Preview A — Split hero</a></li>
+            
+              <li><a href="/preview/home-c/">Preview C — Editorial</a></li>
+            
+              <li><a href="/preview/home-d/">Preview D — Improved current</a></li>
+            
+          </ul>
         
       </li>
     

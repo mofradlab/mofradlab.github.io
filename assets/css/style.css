@@ -1587,15 +1587,15 @@ a.team-group-tag:hover {
   position: relative;
   max-width: 40rem;
   margin-inline: auto;
-  padding-inline: 2rem;
+  padding-inline: 3.5rem;
 }
 
 .home-showcase-slide .pub-carousel-prev {
-  left: -1.5rem;
+  left: -3rem;
 }
 
 .home-showcase-slide .pub-carousel-next {
-  right: -1.5rem;
+  right: -3rem;
 }
 
 .home-showcase-track {
@@ -3116,4 +3116,70 @@ a.team-group-tag:hover {
   .contact-map-card iframe {
     min-height: 15rem;
   }
+}
+
+/* ── Home page layout previews ───────────────────────────────────────────── */
+
+/* Shared: research cards with subtle surface fill */
+.home-research-grid .feature-card {
+  background: var(--surface-50);
+  border-color: transparent;
+}
+
+/* Shared: asymmetric publications grid — 1 large left, 2 small stacked right */
+@media (min-width: 48rem) {
+  .recent-pubs-grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .recent-pubs-grid .feature-card:first-child {
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/* Layout A: split hero — text left, featured card right */
+.layout-preview-a .hero-text,
+.layout-preview-a .hero-featured {
+  max-width: none;
+}
+
+@media (min-width: 54rem) {
+  .layout-preview-a .hero-section {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 53.99rem) {
+  .layout-preview-a .hero-featured { display: none; }
+}
+
+/* Layout C: full-width big feature card */
+.layout-preview-c .home-big-feature {
+  margin-block: var(--space-2);
+}
+
+.layout-preview-c .home-big-feature .showcase-card {
+  max-width: none;
+  height: 20rem;
+}
+
+.layout-preview-c .home-big-feature .showcase-title {
+  font-size: 1.3rem;
+  -webkit-line-clamp: 3;
+}
+
+/* Layout D: taller carousel cards, wider container */
+.layout-preview-d .showcase-card { height: 17rem; }
+.layout-preview-d .home-showcase-carousel { max-width: 50rem; }
+
+@media (max-width: 48rem) {
+  .layout-preview-d .showcase-card { height: 22rem; }
+  .layout-preview-d .showcase-media { height: 10rem; }
 }
