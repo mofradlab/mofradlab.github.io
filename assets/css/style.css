@@ -331,6 +331,12 @@ main a:not(.button-link):not(.book-cover-link):not(.theme-toggle):focus {
   border: 0;
 }
 
+.theme-toggle-input {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 .pub-feat-radio {
   position: fixed;
   top: 50%;

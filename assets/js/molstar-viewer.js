@@ -25,7 +25,7 @@ function colorStringToHex(colorValue) {
 }
 
 function getSurfaceColorString() {
-  const rootStyles = getComputedStyle(document.documentElement);
+  const rootStyles = getComputedStyle(document.body);
   return rootStyles.getPropertyValue('--surface-0').trim() || '#ffffff';
 }
 
@@ -142,6 +142,12 @@ function initializeMolstarWhenVisible(block, observer) {
   });
 }
 
+function reapplyViewerBackgrounds() {
+  requestAnimationFrame(() => {
+    molstarViewers.forEach((viewer) => applyViewerBackground(viewer));
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const blocks = document.querySelectorAll('.js-molstar-viewer');
 
@@ -154,14 +160,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { rootMargin: MOLSTAR_INTERSECTION_ROOT_MARGIN });
 
     blocks.forEach((block) => observer.observe(block));
-    return;
+  } else {
+    blocks.forEach((block) => {
+      initializeMolstarWhenVisible(block);
+    });
   }
 
-  blocks.forEach((block) => {
-    initializeMolstarWhenVisible(block);
-  });
+  const themeToggle = document.getElementById('theme-mode-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('change', reapplyViewerBackgrounds);
+  }
 });
 
-window.addEventListener('themeChanged', () => {
-  molstarViewers.forEach((viewer) => applyViewerBackground(viewer));
-});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', reapplyViewerBackgrounds);
+
+window.addEventListener('themeChanged', reapplyViewerBackgrounds);
