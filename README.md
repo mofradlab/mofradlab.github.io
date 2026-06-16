@@ -1,7 +1,7 @@
 # Molecular Cell Biomechanics Laboratory — Published Site
 
 This repository contains the **pre-built static output** of the lab website, served at
-[mofradlab.github.io/website](https://mofradlab.github.io/website).
+[mofradlab.github.io](https://mofradlab.github.io).
 
 ## Do not edit this repository directly
 
@@ -17,7 +17,7 @@ to this repo through the three-stage CI/CD pipeline:
 
 1. **Validate** — source validators and `bundle exec jekyll build` must pass on `develop`
 2. **Deploy** — Jekyll source is fast-forwarded to `main` → serves `atamadon.github.io`
-3. **Publish** — built `_site/` output is pushed here → serves `mofradlab.github.io/website`
+3. **Publish** — built `_site/` output is pushed here → serves `mofradlab.github.io`
 
 ## Contact
 
