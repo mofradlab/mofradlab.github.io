@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" role="img" aria-labelledby="title desc">
+  <title id="title">Profile placeholder</title>
+  <desc id="desc">Generic profile placeholder in UC Berkeley brand colors.</desc>
+  <rect width="480" height="480" fill="#F2F2F2"/>
+  <circle cx="240" cy="240" r="188" fill="#002676"/>
+  <circle cx="240" cy="186" r="72" fill="#FDB515"/>
+  <path d="M128 366c22-58 70-90 112-90s90 32 112 90" fill="#FDB515"/>
+</svg>

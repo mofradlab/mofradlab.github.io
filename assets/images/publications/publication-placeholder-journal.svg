@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Journal figure placeholder</title>
+  <desc id="desc">Placeholder graphic for publication figure artwork.</desc>
+  <rect width="640" height="420" fill="#010133"/>
+  <rect x="48" y="48" width="544" height="324" rx="18" fill="#F2F2F2"/>
+  <rect x="88" y="90" width="220" height="220" rx="16" fill="#9FD1FF"/>
+  <circle cx="198" cy="200" r="68" fill="#002676"/>
+  <path d="M160 174c28-22 76-12 96 20-26 26-72 32-96 12-17-14-17-18 0-32Z" fill="#FDB515"/>
+  <rect x="350" y="106" width="196" height="18" rx="9" fill="#002676"/>
+  <rect x="350" y="146" width="166" height="14" rx="7" fill="#808080"/>
+  <rect x="350" y="179" width="154" height="14" rx="7" fill="#808080"/>
+  <rect x="350" y="212" width="182" height="14" rx="7" fill="#808080"/>
+  <rect x="350" y="260" width="120" height="36" rx="18" fill="#FC9313"/>
+</svg>
