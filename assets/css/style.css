@@ -1479,6 +1479,7 @@ a.team-group-tag:hover {
   position: relative;
   max-width: 40rem;
   margin-inline: auto;
+  padding-inline: 3.5rem;
 }
 
 .publication-featured-track {
@@ -1535,11 +1536,11 @@ a.team-group-tag:hover {
 }
 
 .pub-carousel-prev {
-  left: 0.6rem;
+  left: -3rem;
 }
 
 .pub-carousel-next {
-  right: 0.6rem;
+  right: -3rem;
 }
 
 .pub-carousel-dots {
@@ -1590,13 +1591,6 @@ a.team-group-tag:hover {
   padding-inline: 3.5rem;
 }
 
-.home-showcase-slide .pub-carousel-prev {
-  left: -3rem;
-}
-
-.home-showcase-slide .pub-carousel-next {
-  right: -3rem;
-}
 
 .home-showcase-track {
   margin: 0;
