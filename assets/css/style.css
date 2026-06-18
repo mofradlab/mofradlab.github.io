@@ -661,6 +661,8 @@ main a:not(.button-link):not(.book-cover-link):not(.theme-toggle):focus {
   left: 50%;
   min-width: max-content;
   max-width: min(16rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - var(--nav-height, 4rem) - 1rem);
+  overflow-y: auto;
   padding: var(--space-2);
   margin: 0;
   list-style: none;
