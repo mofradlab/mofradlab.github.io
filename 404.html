@@ -81,7 +81,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+4:wght@400;700&display=swap"
     rel="stylesheet" />
   
-  <link rel="stylesheet" href="/assets/css/style.css?v=1783382400" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=77f4e5b07112722fb6eda5d08075f7df554a171f" />
   
   <script src="/assets/js/external-links.js" defer></script>
 </head>
@@ -440,27 +440,169 @@
 
 
   <main id="main-content">
-    <section class="page-section">
-  
-<div class="section-heading">
-  <div>
-    
-    <h2>Page not found</h2>
-  </div>
-  
-</div>
+    <style>
+.page-404 {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  min-height: calc(100dvh - 4rem);
+}
 
-  <article class="feature-card">
-    <p>The page you requested could not be found.</p>
-    <p>You can continue here:</p>
-    <div class="hero-actions">
-      <a class="button-link" href="/">Home</a>
-      <a class="button-link button-link-secondary" href="/research/">Research</a>
-      <a class="button-link button-link-secondary" href="/publications/">Publications</a>
-      <a class="button-link button-link-secondary" href="/team/">Team</a>
-    </div>
-  </article>
-</section>
+.p404-vis {
+  background: #050d1a;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.p404-vis img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.55;
+}
+
+.p404-vis-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(5,13,26,0.9) 0%, rgba(5,13,26,0.2) 50%, transparent 75%),
+    radial-gradient(ellipse 65% 55% at 50% 45%, rgba(0,38,118,0.25) 0%, transparent 60%);
+}
+
+.p404-num {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-serif);
+  font-size: clamp(6rem, 12vw, 14rem);
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(253,181,21,0.82);
+  padding: 0 2rem 1.5rem;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.p404-vis-credit {
+  position: relative;
+  z-index: 2;
+  font-size: 0.6rem;
+  color: rgba(255,255,255,0.2);
+  padding: 0 2rem 1rem;
+  margin: 0;
+}
+
+.p404-content {
+  padding: 4rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid var(--line-300);
+}
+
+.p404-kicker {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--berkeley-gold);
+  margin: 0 0 1rem;
+}
+
+.p404-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 2.5vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+.p404-copy {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-700);
+  max-width: 52ch;
+  margin: 0 0 2.5rem;
+}
+
+.p404-rule {
+  border: none;
+  border-top: 1px solid var(--line-300);
+  margin: 0 0 2rem;
+}
+
+.p404-nav-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-700);
+  margin: 0 0 1rem;
+}
+
+.p404-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.p404-nav-links a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--berkeley-blue);
+  text-decoration: none;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--line-300);
+}
+
+.p404-nav-links a::before {
+  content: "→ ";
+  color: var(--berkeley-gold);
+  font-style: normal;
+}
+
+.p404-nav-links a:hover {
+  color: var(--berkeley-blue);
+  text-decoration: underline;
+}
+
+@media (max-width: 56rem) {
+  .page-404 { grid-template-columns: 1fr; min-height: auto; }
+  .p404-vis { height: 22rem; }
+  .p404-content { border-left: none; padding: 2.5rem 1.5rem; }
+}
+</style>
+
+<div class="page-404">
+
+  <div class="p404-vis">
+    <img src="/assets/images/vis/alpha-amylase.gif" alt="Enzyme active site" loading="eager" />
+    <div class="p404-vis-overlay"></div>
+    <p class="p404-num" aria-hidden="true">404</p>
+    <p class="p404-vis-credit">Enzyme active site &middot; CC BY-SA 4.0</p>
+  </div>
+
+  <div class="p404-content">
+    <p class="p404-kicker">University of California, Berkeley</p>
+    <h1 class="p404-headline">This molecule could not be located in our structure.</h1>
+    <p class="p404-copy">The page you requested doesn't exist or may have moved. Our lab studies molecular mechanics at nanometer scales — finding missing pages is unfortunately outside that scope.</p>
+
+    <hr class="p404-rule" />
+
+    <p class="p404-nav-label">You can navigate here instead</p>
+    <nav class="p404-nav-links" aria-label="Site navigation">
+      <a href="/">Home</a>
+      <a href="/research/">Research</a>
+      <a href="/publications/">Publications</a>
+      <a href="/team/">Team</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+
+</div>
 
     
   </main>
