@@ -52,8 +52,9 @@
   --space-5: 2rem;
   --space-6: 3rem;
   --space-7: 4rem;
-  --font-sans: "Inter", Arial, sans-serif;
-  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: var(--theme-font-sans, "Inter", Arial, sans-serif);
+  --font-serif: var(--theme-font-serif, "Source Serif 4", Georgia, serif);
+  --font-condensed: var(--theme-font-condensed, "Barlow Condensed", Arial, sans-serif);
   --motion-fast: var(--theme-motion-fast, 160ms);
   --motion-base: var(--theme-motion-base, 240ms);
   --ease-standard: cubic-bezier(0.2, 0, 0.12, 1);
@@ -424,6 +425,31 @@ main a:not(.button-link):not(.book-cover-link):not(.theme-toggle):focus {
   font-weight: 700;
 }
 
+.footer-berkeley-mark {
+  width: min(100%, var(--content-width));
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  border-top: 1px solid var(--line-300);
+  text-align: center;
+}
+
+.footer-berkeley-link {
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity var(--motion-fast);
+}
+
+.footer-berkeley-link:hover {
+  opacity: 1;
+}
+
+.berkeley-wordmark {
+  width: 225px;
+  max-width: 100%;
+  height: auto;
+}
+
 /* ------------------------------------------------------------
    5. Site Header & Navigation
    ------------------------------------------------------------ */
@@ -471,9 +497,9 @@ main a:not(.button-link):not(.book-cover-link):not(.theme-toggle):focus {
 
 .site-brand-title {
   color: var(--header-text);
-  font-family: var(--font-serif);
+  font-family: var(--theme-title-font, var(--font-serif));
   font-size: clamp(1.25rem, 1.75vw, 1.65rem);
-  font-weight: 700;
+  font-weight: var(--theme-title-weight, 700);
   line-height: 1.1;
 }
 
