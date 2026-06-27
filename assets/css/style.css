@@ -75,6 +75,8 @@
   --line-200: var(--line-300);
   --ink-800: var(--ink-900);
   --ink-600: var(--ink-700);
+  --research-dark-bg: #06111e;
+  --research-dark-bg-alt: #050d1a;
 }
 
 /* ------------------------------------------------------------
@@ -545,7 +547,7 @@ main a:not(.button-link):not(.book-cover-link):not(.theme-toggle):focus {
   display: block;
   width: 1.05rem;
   height: 2px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: currentColor;
 }
 
@@ -668,7 +670,7 @@ main a:not(.button-link):not(.book-cover-link):not(.theme-toggle):focus {
   margin: 0;
   list-style: none;
   border: 1px solid var(--line-300);
-  border-radius: 1rem;
+  border-radius: var(--radius-card);
   background: var(--surface-0);
   box-shadow: var(--shadow-card);
   transform: translateX(-50%);
@@ -1338,7 +1340,7 @@ a.team-group-tag:hover {
   flex: 0 0 auto;
   padding: 0.72rem 1.05rem;
   border: 1px solid var(--line-300);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface-0);
   box-shadow: var(--shadow-card);
   color: var(--ink-900);
@@ -1426,7 +1428,7 @@ a.team-group-tag:hover {
   flex: 0 0 auto;
   padding: 0.72rem 1.05rem;
   border: 1px solid var(--line-300);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface-0);
   box-shadow: var(--shadow-card);
   color: var(--ink-900);
@@ -1520,7 +1522,7 @@ a.team-group-tag:hover {
   width: 2.6rem;
   height: 2.6rem;
   border: 1px solid var(--line-300);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--surface-0);
   box-shadow: var(--shadow-card);
   color: var(--berkeley-blue);
@@ -1671,7 +1673,7 @@ a.team-group-tag:hover {
   align-self: start;
   justify-self: start;
   padding: 0.15rem 0.55rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -1834,7 +1836,7 @@ a.team-group-tag:hover {
   display: inline-flex;
   align-items: center;
   padding: 0.35rem 0.75rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: rgba(253, 181, 21, 0.12);
   color: var(--berkeley-blue);
   font-size: 0.88rem;
@@ -1941,7 +1943,7 @@ a.team-group-tag:hover {
   right: 0;
   bottom: 0.5rem;
   height: 1rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: linear-gradient(180deg, #a56a3b, #734520);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
@@ -2626,7 +2628,7 @@ a.team-group-tag:hover {
     margin-left: 0.5rem;
     margin-right: 0;
     border: 1px solid var(--line-300);
-    border-radius: 1rem;
+    border-radius: var(--radius-card);
     box-shadow: var(--shadow-card);
     background: var(--surface-0);
     transform: none;
@@ -3642,7 +3644,7 @@ a.team-group-tag:hover {
   border-color: rgba(141, 183, 255, 0.35);
 }
 
-.dark-section { background: #06111e; }
+.dark-section { background: var(--research-dark-bg); }
 
 .dark-section-heading {
   font-size: 0.7rem;
@@ -3664,7 +3666,7 @@ a.team-group-tag:hover {
   border: 1px solid rgba(141, 183, 255, 0.2);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  transition: border-color 160ms;
+  transition: border-color var(--motion-fast) var(--ease-standard);
 }
 
 .dark-research-card:hover { border-color: rgba(141, 183, 255, 0.45); }
@@ -3724,7 +3726,7 @@ a.team-group-tag:hover {
   display: flex;
   gap: var(--space-5);
   flex-wrap: wrap;
-  background: #06111e;
+  background: var(--research-dark-bg);
 }
 
 .dark-callout-link {
@@ -3999,11 +4001,11 @@ a.team-group-tag:hover {
   padding: 0.4rem 1rem;
   background: var(--surface-100);
   border: 1px solid var(--line-300);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   font-size: 0.85rem;
   color: var(--ink-900);
   text-decoration: none;
-  transition: background var(--motion-fast);
+  transition: background var(--motion-fast) var(--ease-standard);
 }
 
 .tl-area-pill:hover {
@@ -4144,7 +4146,7 @@ a.team-group-tag:hover {
   padding: 0.35rem 0.8rem;
   background: var(--surface-100);
   border: 1px solid var(--line-300);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   font-size: 0.78rem;
   color: var(--ink-900);
   text-decoration: none;
@@ -4440,7 +4442,7 @@ a.team-group-tag:hover {
   background: #002676;
   color: #fff;
   padding: 2rem;
-  border-radius: 1rem;
+  border-radius: var(--radius-card);
   display: flex;
   flex-direction: column;
 }
